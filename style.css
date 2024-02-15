@@ -2,18 +2,23 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-image: url(bg1.jpg);
+  background-image: url(bg3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  display: flex; /* Tambahkan properti ini untuk menggunakan flexbox */
+  flex-direction: column; /* Tambahkan properti ini agar elemen tumpuk secara vertikal */
+  justify-content: center; /* Tambahkan properti ini untuk menyusun elemen di tengah vertikal */
+  align-items: center;
 }
 #audioContainer {
   text-align: center;
 }
 audio {
   background-color: rgba(255, 255, 255, 0.7);
-  border: 2px solid #e74c3c;
+  border: 2px solid white;
   border-radius: 8px;
-  width: 35%;
+  width: 80%;
   height: 150px;
   margin: 20px auto;
   text-align: center;
@@ -22,9 +27,9 @@ audio {
 p {
   font-size: 100px;
   text-align: center;
-  color: pink;
+  color: darkblue;
   font-family: "Snell Roundhand", cursive;
-  text-shadow: 5px 2px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 7px 2px 2px rgba(26, 25, 25, 0.3);
 }
 #overlay {
   position: fixed;
@@ -45,7 +50,7 @@ button {
   width: 80px;
   height: 50px;
   top: 47%;
-  left: 47%;
+  left: 49%;
   border-radius: 20px;
   cursor: pointer;
 }
@@ -58,25 +63,30 @@ button {
 /* Media query untuk tablet (lebar maksimum 768px) */
 @media only screen and (max-width: 768px) {
   audio {
-    width: 50%;
+    width: 85%;
     max-width: 300px;
     height: 100px;
   }
 
   p {
-    font-size: 5vw;
+    font-size: 50px;
+    text-align: center;
   }
 }
 
 /* Media query untuk ponsel (lebar maksimum 480px) */
 @media only screen and (max-width: 480px) {
+  body {
+    background-size: cover;
+  }
   audio {
-    width: 60%;
+    width: 90%;
     max-width: none;
     height: 100px;
   }
 
   p {
-    font-size: 6vw;
+    font-size: 50px;
+    text-align: center;
   }
 }
